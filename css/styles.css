@@ -1,0 +1,11 @@
+form#login{
+	padding: 20px;
+    background-color: wheat;
+    width: 500px;
+}
+
+form#register{
+	padding: 20px;
+    background-color: wheat;
+    width: 600px;
+}
