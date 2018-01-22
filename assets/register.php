@@ -4,11 +4,10 @@
    include 'connect.php';
    include 'functions.php'; 
    require 'header.php'; 
-
     ?> 
       <div id="registersection" >
         
-          <form id="register" class="form" onsubmit="return UserInputs()">
+          <form id="register" class="form" onsubmit="return RegisterNewUser();">
             <div class="form-group form-inline">
               <label style="width:27%;" for="Username">username</label>
               <input id="username" style="width:67%" type="username" name="username" class="form-control" placeholder="enter Username" required>
@@ -41,7 +40,8 @@
             </div>
             <div>
             <button name='register' type="submit" class="btn btn-primary">Register</button>  <hr>  
-            <a href="../index.php" title="Login">Go to Login</a>
+            <a href="../index.php" title="Login" id="a_login" 
+            style="color: #0015ff;padding: 7px;text-decoration: none;">Go to Login</a>
             </div>  
           </form>    
       </div>

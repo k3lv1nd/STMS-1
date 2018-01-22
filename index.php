@@ -3,12 +3,8 @@ $page="Login Panel";
 include 'assets/connect.php';
 include 'assets/functions.php'; 
 require 'assets/header.php';
-
- ?>
-
-    
-      <div class="row" id="loginsection">
-      
+ ?>   
+      <div class="row" id="loginsection">      
         <form id="login" action="" method="post" class="form">
           <div class="form-group form-inline">
             <label style="width:27%; text-align: right;" for="email">Email</label>
@@ -25,10 +21,7 @@ require 'assets/header.php';
           <a href="assets/register.php" title="Register New Account" >Create Account</a>
           </div>  
         </form>
-      </div>
-
-
-  
+      </div>  
 <?php 
 
 require 'assets/footer.php';
