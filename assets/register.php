@@ -1,10 +1,16 @@
    <?php
    $path ='../';
+   $page="Register for a New Account";
+   include 'connect.php';
+   include 'functions.php'; 
    require 'header.php'; 
+   if (($_SERVER['REQUEST_METHOD'] == 'POST')) {
+     # code...
+   }
 
     ?> 
       <div id="registersection" >
-        <h1 style=" margin-left: 30px;margin-top: 0px;color: #415d08;">Register</h1>
+        
           <form id="register" action="" method="post" class="form">
             <div class="form-group form-inline">
               <label style="width:27%;" for="Username">username</label>
@@ -17,6 +23,15 @@
               
             </div>
             <div class="form-group form-inline">
+               <label style="width:27%;" for="role">Role</label>
+               <select style="width:67%" name="role" class="form-control" required>
+                <option value="">Select Role</option>
+                 <option value="regularUser">ReqularUser</option>
+                 <option value="userManager">User Manager</option>
+                 <option value="Admin">Admin</option>
+               </select>
+            </div>
+            <div class="form-group form-inline">
               <label style="width:27%;" for="password">Password</label>
               <input style="width:67%" type="password" name="password" class="form-control" placeholder="enter password" required>
               
@@ -27,7 +42,7 @@
               
             </div>
             <div>
-            <button type="submit" class="btn btn-primary">Register</button>  <hr>  
+            <button name='register' type="submit" class="btn btn-primary">Register</button>  <hr>  
             <a href="../index.php" title="Login">Go to Login</a>
             </div>  
           </form>    
