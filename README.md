@@ -20,3 +20,12 @@
 	In any case you should be able to explain how a REST API works and demonstrate that by creating functional tests that use the REST Layer directly. Please be prepared to use REST clients like Postman, cURL, etc for this purpose.
 	All actions need to be done client side using AJAX, refreshing the page is not acceptable. 
 	Bonus: unit and e2e tests!
+
+
+# Notes
+	<?php echo empty($path)?'':$path; ?>
+	if(empty($path)){
+		echo '';
+	}else{
+		echo $path;
+	}
