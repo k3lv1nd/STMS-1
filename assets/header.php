@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Peter Kariuki Mutuura ">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="../images/code.png">
 
     <title>Simple Time Management System</title>
     <link href="<?php echo empty($path)?'':$path; ?>css/bootstrap.min.css" rel="stylesheet">
