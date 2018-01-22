@@ -1,6 +1,3 @@
-<?php
-    
- ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +12,6 @@
     <link href="<?php echo empty($path)?'':$path; ?>css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php echo empty($path)?'':$path; ?>css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Ceviche+One" rel="stylesheet">
-    <!-- cho empty($address['street2']) ? "Street2 is empty!" : $address['street2']; -->
 
   </head>
 
@@ -26,6 +22,7 @@
         <h1 style=" margin-left: 30px;margin-top: 0px;color: #415d08; font-size: 25px;">
             <?php echo $page ?> 
         </h1>
-        <div class="alert alert-<?php echo $notification['type'];  ?> " style="width: 52%;text-align: center;font-weight: bold; display:<?php echo $notification['display'];  ?>; ">
-            <?php echo $notification['message'];  ?>
+        <div id="displayresponse" class="alert" 
+            style="width: 52%;text-align: center;font-weight: bold; display:none;">
+            
         </div>

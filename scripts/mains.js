@@ -1,3 +1,7 @@
+// $(document).ready(function(){
+// 	alert("alksjdlakdjlkasjdl");
+// });
+
 function UserInputs(){
 	var email =document.getElementById("email").value;
 	var role =document.getElementById("role").value;
@@ -5,17 +9,33 @@ function UserInputs(){
 	var password =document.getElementById("password").value;
 	var confirmPassword =document.getElementById("confirmPassword").value;
 	if (password===confirmPassword) {
-		document.getElementById("error").innerHTML="";
-		document.getElementById('register').reset();
-		registerNewUser(email,username,role,password);
-		return false;
+		if (password.length<6) {
+			document.getElementById("error").innerHTML="Password Should be a MInimum of 6 Characters!!";
+		}else{
+			var data={username:username,email:email,password:password,role:role};
+			document.getElementById("error").innerHTML="";
+			document.getElementById('register').reset();
+			//console.log(data);
+			$.ajax({
+				type:"POST",
+				url:"registernewuser.php",
+				data:data,
+				success:function(data){
+					console.log(data);
+				},
+				error:function(data){
+					console.log('Error:'+data);
+				}
+			});
+
+			//registerNewUser(email,username,role,password);
+			//console.log(email+'/'+username+'/'+password+'/'+role);
+		}
+		
 	}else{
 		document.getElementById("error").innerHTML="The Two Password Fields Should Match!!";
-		return false;
+		
 	}
 
-	
-}
-function registerNewUser(email,username,password,role){
-	console.log(email+'/'+username+'/'+password+'/'+role);
+return false;	
 }

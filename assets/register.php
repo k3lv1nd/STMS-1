@@ -8,7 +8,7 @@
     ?> 
       <div id="registersection" >
         
-          <form id="register" action="" method="post" class="form" onsubmit="return UserInputs()">
+          <form id="register" class="form" onsubmit="return UserInputs()">
             <div class="form-group form-inline">
               <label style="width:27%;" for="Username">username</label>
               <input id="username" style="width:67%" type="username" name="username" class="form-control" placeholder="enter Username" required>
@@ -30,12 +30,12 @@
             </div>
             <div class="form-group form-inline">
               <label style="width:27%;" for="password">Password</label>
-              <input id="password" style="width:67%" type="password" name="password" class="form-control" placeholder="enter password" required>
+              <input id="password" style="width:67%" type="password" name="password" class="form-control" placeholder="enter password" min="6" required>
               
             </div>
             <div class="form-group form-inline">
               <label style="width:27%;" for="Confirm Password">Confirm Password</label>
-              <input id="confirmPassword" style="width:67%" type="Confirm Password" name="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+              <input id="confirmPassword" style="width:67%" type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password" required min="6">
 
               <small id="error" style="margin-left: 28%; color: red;"></small>
             </div>
