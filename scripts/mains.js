@@ -1,3 +1,28 @@
+function UserLogin(){
+	var email =document.getElementById("email").value;
+	var password = document.getElementById("password").value;
+	var data={email:email,password:password};
+	$.ajax({
+		type:"POST",
+		url:"loginuser.php"
+		data:data,
+		success:function(data){
+
+		},
+		error:function(data){
+			console.log(data);
+		}
+
+	});
+
+
+	return false;
+}
+
+
+
+
+
 function RegisterNewUser(){
 	var email =document.getElementById("email").value;
 	var role =document.getElementById("role").value;
@@ -33,7 +58,6 @@ function RegisterNewUser(){
 						"A very Bad Error has Occured, But a team of highly trained Monkeys have been dispatched to handle it.No worry!";
 
 					}else{
-						console.log(data);
 						document.getElementById("displayresponse").className +=' alert-danger';
 						document.getElementById("displayresponse").innerHTML="User Already Exists in Our records!";
 

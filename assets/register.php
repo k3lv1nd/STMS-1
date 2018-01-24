@@ -1,4 +1,6 @@
    <?php
+   session_start();
+   session_regenerate_id(true);
    $path ='../';
    $page="Register for a New Account";
    include 'connect.php';
