@@ -18,3 +18,17 @@ form#register{
 h1{
 	font-family: 'Ceviche One', cursive;
 }
+a#login{
+    padding: 10px;
+    background-color: yellowgreen;
+    margin: 0px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    color: #0a0000;
+}
+a.loginactive{
+    background-color: #5f9ea0 !important;
+    color: #fff !important;
+}
+

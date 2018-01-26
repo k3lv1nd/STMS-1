@@ -2,12 +2,13 @@ function UserLogin(){
 	var email =document.getElementById("email").value;
 	var password = document.getElementById("password").value;
 	var data={email:email,password:password};
+
 	$.ajax({
 		type:"POST",
-		url:"loginuser.php"
+		url:"assets/loginuser.php",
 		data:data,
 		success:function(data){
-
+			console.log(data);
 		},
 		error:function(data){
 			console.log(data);

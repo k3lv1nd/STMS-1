@@ -1,9 +1,12 @@
 <?php
 session_start();
 session_regenerate_id(true);
-$page="Regular User Login Panel";
+$page="Admin Login Panel";
 include 'assets/connect.php';
 include 'assets/functions.php'; 
+    $regular_user="";
+    $user_manager='';
+    $admin='loginactive';
 require 'assets/header.php';
 
  ?>   
